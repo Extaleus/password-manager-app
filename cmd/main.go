@@ -34,6 +34,11 @@ func main() {
 
 	_ = storage
 
+	err = storage.DeleteUrl("google")
+	if err != nil {
+		log.Error("failed delete url", sl.Err(err))
+	}
+
 	// TODO: init router: chi
 
 	// TODO: run server:
